@@ -7,7 +7,8 @@ import { SetEmail } from "../../Store/actions";
 const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     dispatch(SetEmail(email));
   };
   return (
